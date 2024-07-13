@@ -1,10 +1,12 @@
 //using Q2.Models;
 
+using Q2.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-//builder.Services.AddDbContext<SP24_PRN221Context>();
+builder.Services.AddDbContext<PE_PRN_24SumB1Context>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,5 +25,6 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+app.MapGet("/", () => "Hello World!");
 
 app.Run();
