@@ -43,6 +43,7 @@ namespace Q2.Pages.Course
             {
                 Title = AddCourseRequest.Title,
                 Description = AddCourseRequest.Description,
+                InstructorId = AddCourseRequest.InstructorId,
             };
 
             _context.Add(course);
